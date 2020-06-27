@@ -13,10 +13,10 @@ public class Level3PracticeA {
 	 * TODO: Complete the FishingContest class so the following tests pass
 	 */
 	static final double SMALL_NUMBER = 0.0001;
-	double[] johnsCatches = new double[] {12, 2.9, 3}; 
-	double[] esmesCatches = new double[] {2, 2.9, 3.3}; 
+	double[] johnsCatches = new double[] {12.0, 2.9, 3.0}; 
+	double[] esmesCatches = new double[] {2.0, 2.9, 3.3}; 
 	double[] davidsCatches = new double[] {}; 
-	double[] isisCatches = new double[] {1, 2.4, 3, 2, 1, 1, 1, 1, 1, }; 
+	double[] isisCatches = new double[] {1, 2.4, 3.0, 2.0, 1.0, 1.0, 1.0, 1.0, 1.0, }; 
 
 	/*
 	 * Each person will receive a certificate listing the weight of the biggest fish they caught
@@ -31,10 +31,10 @@ public class Level3PracticeA {
 		allCatches.put("david", davidsCatches);
 
 		FishingContest contest = new FishingContest(allCatches);
-		assertEquals(12, contest.findBiggestFish("john"), SMALL_NUMBER);
+		assertEquals(12.0, contest.findBiggestFish("john"), SMALL_NUMBER);
 		assertEquals(3.3, contest.findBiggestFish("esme"), SMALL_NUMBER);
-		assertEquals(3, contest.findBiggestFish("isis"), SMALL_NUMBER);
-		assertEquals(0, contest.findBiggestFish("david"), SMALL_NUMBER);
+		assertEquals(3.0, contest.findBiggestFish("isis"), SMALL_NUMBER);
+		assertEquals(0.0, contest.findBiggestFish("david"), SMALL_NUMBER);
 	}
 
 	/*
