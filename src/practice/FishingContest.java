@@ -17,20 +17,20 @@ public class FishingContest {
 	public String findWinner() {
 		double[] largestFish = new double[h.size()];
 		Set<String> s = h.keySet();
-		String[] sI = (String[]) s.toArray();
+		String[] sI = new String[s.size()];
+		s.toArray(sI);
 		for (int i = 0; i < h.size(); i++) {
 			largestFish[i] = findBiggestFish(sI[i]);
 		}
 		double biggest = 0;
+		int key = 0;
 		for (int i = 0; i < sI.length; i++) {
 			if (largestFish[i] > biggest) {
 				biggest = largestFish[i];
+				key = i;
 			}
 		}
-		for (int i = 0; i < sI.length; i++) {
-			
-		}
-		return null;
+		return sI[key];
 	}
 	
 	public double findLargestFish(String string, HashMap<String, double[]> hashmap) {
